@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 //import com.baidu.appx.BDNativeAd;
+import com.baidu.appx.BDNativeAd;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
@@ -104,7 +105,7 @@ public class ComicAdapter extends RecyclerView.Adapter {
                 }
             });
         } else {
-           /* final BDNativeAd.AdInfo adInfo=bookList.get(position).getAdInfo();
+           final BDNativeAd.AdInfo adInfo=bookList.get(position).getAdInfo();
             if (adInfo != null) {
                 String title = adInfo.getTitle();
                 String description = adInfo.getDescription();
@@ -157,7 +158,7 @@ public class ComicAdapter extends RecyclerView.Adapter {
                         }).create().show();
                     }
                 });
-            }*/
+            }
         }
     }
     @Override
@@ -188,7 +189,7 @@ public class ComicAdapter extends RecyclerView.Adapter {
         TextView fileSizeTv;
         TextView descriptionTv;
         ImageView iconIv;
-       /* BDNativeAd.AdInfo adInfo;
+        BDNativeAd.AdInfo adInfo;
 
         public BDNativeAd.AdInfo getAdInfo() {
             return adInfo;
@@ -196,7 +197,7 @@ public class ComicAdapter extends RecyclerView.Adapter {
 
         public void setAdInfo(BDNativeAd.AdInfo adInfo) {
             this.adInfo = adInfo;
-        }*/
+        }
 
         public FooterViewHolder(View itemView) {
             super(itemView);

@@ -25,6 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
+import com.baidu.appx.BDBannerAd;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
@@ -66,6 +67,8 @@ public class ResultpageFragment extends Fragment implements SearchComicAdapter.O
 
     public  TextView totalTv,loadedNumTv;
     private OkHttpClient okHttpClient;
+    private RelativeLayout adLayout;
+    private BDBannerAd bannerview;
 
     @Nullable
     @Override
@@ -128,6 +131,38 @@ public class ResultpageFragment extends Fragment implements SearchComicAdapter.O
              } else {
                  Toast.makeText(getContext(), "网络未连接", Toast.LENGTH_SHORT).show();
              }
+        adLayout= (RelativeLayout) view.findViewById(R.id.adLayout);
+          //创建并展示广告
+        bannerview = new BDBannerAd(getActivity(),getString(R.string.ad_apikey),getString(R.string.banner_ad_id));
+        bannerview.setAdSize(BDBannerAd.SIZE_FULL_FLEXIBLE);
+
+        bannerview.setAdListener(new BDBannerAd.BannerAdListener() {
+            @Override
+            public void onAdvertisementDataDidLoadSuccess() {
+                Log.i(TAG, "onAdvertisementDataDidLoadSuccess: ");
+            }
+
+            @Override
+            public void onAdvertisementDataDidLoadFailure() {
+                Log.i(TAG, "onAdvertisementDataDidLoadFailure: ");
+            }
+
+            @Override
+            public void onAdvertisementViewDidShow() {
+                Log.i(TAG, "onAdvertisementViewDidShow: ");
+            }
+
+            @Override
+            public void onAdvertisementViewDidClick() {
+                Log.i(TAG, "onAdvertisementViewDidClick: ");
+            }
+
+            @Override
+            public void onAdvertisementViewWillStartNewIntent() {
+                Log.i(TAG, "onAdvertisementViewWillStartNewIntent: ");
+            }
+        }) ;
+        adLayout.addView(bannerview);
         return view;
     }
     private AlertDialog loadingDialog;
@@ -282,7 +317,7 @@ public class ResultpageFragment extends Fragment implements SearchComicAdapter.O
                             Log.i("response", "onResponse: "+s);
                         }else {
                             total = mResult.getTotal();
-                            totalTv.setText("总计："+total);
+                            totalTv.setText("总计："+"\n"+total);
                             if (mResult.getTotal() == 0) {
                                 refreshLayout.finishRefresh();
                                 refreshLayout.finishRefreshLoadMore();
@@ -297,7 +332,7 @@ public class ResultpageFragment extends Fragment implements SearchComicAdapter.O
                                         comicAdapter.setOnItemClickListener(ResultpageFragment.this);
                                         load=comicAdapter.getBookList().size();
                                         recyclerView.setAdapter(comicAdapter);
-                                        loadedNumTv.setText("已加载："+load);
+                                        loadedNumTv.setText("已加载："+"\n"+load);
                                         loadingDialog.cancel();
                                     } else {
                                         load=comicAdapter.getBookList().size();
@@ -310,7 +345,7 @@ public class ResultpageFragment extends Fragment implements SearchComicAdapter.O
                                             comicAdapter.getBookList().addAll(0, bookArrayList);
                                             comicAdapter.notifyDataSetChanged();
                                         }
-                                        loadedNumTv.setText("已加载："+ load);
+                                        loadedNumTv.setText("已加载："+"\n"+ load);
 
 
                                     }
@@ -386,5 +421,13 @@ public class ResultpageFragment extends Fragment implements SearchComicAdapter.O
     public void onItemClick(RecyclerView.ViewHolder viewHolder, ArrayList<book> bookList, int position) {
         openBookInfoDialog(bookList.get(position));
         mBook=bookList.get(position);
+    }
+
+    @Override
+    public void onDetach() {
+        adLayout.removeAllViews();
+        bannerview.destroy();
+        bannerview=null;
+        super.onDetach();
     }
 }

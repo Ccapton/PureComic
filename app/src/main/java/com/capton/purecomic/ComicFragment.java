@@ -27,6 +27,7 @@ import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 //import com.baidu.appx.BDNativeAd;
+import com.baidu.appx.BDNativeAd;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
@@ -72,7 +73,7 @@ public class ComicFragment extends Fragment implements ComicAdapter.OnItemClickL
     private SharedPreferences spf;
    private OkHttpClient okHttpClient;
 
- //   private BDNativeAd nativeAd;
+    private BDNativeAd nativeAd;
 
     public ComicFragment( ) {
     }
@@ -89,8 +90,8 @@ public class ComicFragment extends Fragment implements ComicAdapter.OnItemClickL
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         okHttpClient=new OkHttpClient();
-   //     nativeAd = new BDNativeAd(getActivity(), getString(R.string.ad_apikey), getString(R.string.native_ad_id));
-   //     nativeAd.loadAd();
+        nativeAd = new BDNativeAd(getActivity(), getString(R.string.ad_apikey), getString(R.string.native_ad_id));
+        nativeAd.loadAd();
         if(spf==null)
         spf=getContext().getSharedPreferences("history",Context.MODE_PRIVATE);
         total=spf.getInt("total_"+type,1000);
@@ -212,9 +213,9 @@ public class ComicFragment extends Fragment implements ComicAdapter.OnItemClickL
             openBookInfoDialog(bookList.get(position));
             mBook = bookList.get(position);
         }else {
-              /*  BDNativeAd.AdInfo adInfo = ((ComicAdapter.FooterViewHolder) viewHolder).getAdInfo();
+                BDNativeAd.AdInfo adInfo = ((ComicAdapter.FooterViewHolder) viewHolder).getAdInfo();
                 adInfo.didClick();
-                Toast.makeText(getContext(), "正在后台下载应用", Toast.LENGTH_SHORT).show();*/
+                Toast.makeText(getContext(), "正在后台下载应用", Toast.LENGTH_SHORT).show();
         }
     }
     private AlertDialog alertDialog;
@@ -370,9 +371,9 @@ public class ComicFragment extends Fragment implements ComicAdapter.OnItemClickL
                         total=mResult.getTotal();
                         if (mResult != null) {
                             bookArrayList = mResult.getBookList();
-                            if(middle%60==0) {
+                            if(middle%120==0) {
                                 ArrayList<book> adBookList = new  ArrayList<book>();
-                              /*  if (nativeAd.isLoaded()) {
+                               if (nativeAd.isLoaded()) {
                                     Log.i(TAG, "onPostExecute: "+"nativeAd is loaded");
                                     ArrayList<BDNativeAd.AdInfo> adArray = nativeAd.getAdInfos();
                                     //... 自定义展示UI，其中BDNativeAd.AdInfo里的
@@ -390,7 +391,7 @@ public class ComicFragment extends Fragment implements ComicAdapter.OnItemClickL
                                             bookArrayList.addAll(0,adBookList);
                                         }
                                     }
-                                }*/
+                                }
                             }
                             if(bookArrayList!=null) {
                                 if (comicAdapter == null) {

@@ -948,37 +948,7 @@ private void toast(String content,int type){
         }
 
         adLayout= (RelativeLayout) findViewById(R.id.adLayout);
-       /* //创建并展示广告
-        bannerview = new BDBannerAd(this, getString(R.string.ad_apikey), getString(R.string.banner_ad_id));
-        bannerview.setAdSize(BDBannerAd.SIZE_FLEXIBLE);
-       
-        bannerview.setAdListener(new BDBannerAd.BannerAdListener() {
-            @Override
-            public void onAdvertisementDataDidLoadSuccess() {
-                Log.i(TAG, "onAdvertisementDataDidLoadSuccess: ");
-            }
 
-            @Override
-            public void onAdvertisementDataDidLoadFailure() {
-                Log.i(TAG, "onAdvertisementDataDidLoadFailure: ");
-            }
-
-            @Override
-            public void onAdvertisementViewDidShow() {
-                Log.i(TAG, "onAdvertisementViewDidShow: ");
-            }
-
-            @Override
-            public void onAdvertisementViewDidClick() {
-                Log.i(TAG, "onAdvertisementViewDidClick: ");
-            }
-
-            @Override
-            public void onAdvertisementViewWillStartNewIntent() {
-                Log.i(TAG, "onAdvertisementViewWillStartNewIntent: ");
-            }
-        }) ;
-        adLayout.addView(bannerview);*/
 
     }
 

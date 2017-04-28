@@ -5,6 +5,8 @@ import android.util.Log;
 
 //import com.baidu.appx.BaiduAppX;
 
+import com.baidu.appx.BaiduAppX;
+
 import cn.bmob.v3.Bmob;
 //import cn.jpush.android.api.JPushInterface;
 
@@ -20,7 +22,7 @@ public class App extends Application {
         super.onCreate();
         Bmob.initialize(this,getString(R.string.bmob_appid));
 
-       // Log.i("BaiduAppX", "BaiduAppX version"+  BaiduAppX.version());
+        Log.i("BaiduAppX", "BaiduAppX version"+  BaiduAppX.version());
     }
 
 }

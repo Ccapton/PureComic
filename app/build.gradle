@@ -20,7 +20,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -44,14 +44,15 @@ dependencies {
     compile 'com.github.ybq:Android-SpinKit:1.1.0'
     //图片选择器
     compile 'com.yuyh.imgsel:library:1.2.0'
-
     // 此处以JCore 1.1.2 版本为例。
-     compile project(':MaterialRefreshLayout')
+    compile project(':MaterialRefreshLayout')
     //badgeView
     compile 'q.rorbin:badgeview:1.1.0'
     //bannerView
-   // compile 'com.github.Ccapton:BannerView:1.0'
-     compile project(':optionlayout')
+    // compile 'com.github.Ccapton:BannerView:1.0'
+    compile project(':optionlayout')
     compile project(':PagerIndicator')
     testCompile 'junit:junit:4.12'
+    compile files('libs/baidu_cuid.jar')
+    compile files('libs/BaiduAppX_V2.4.1_20160530.jar')
 }

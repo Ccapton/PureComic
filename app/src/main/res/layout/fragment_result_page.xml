@@ -8,21 +8,31 @@
         android:layout_width="match_parent"
         android:layout_height="36dp">
 
+        <RelativeLayout
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/adLayout">
+
+        </RelativeLayout>
+
         <TextView
             android:text="总计：0"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id="@+id/totalTv"
-            android:textSize="10sp"
+            android:textSize="8sp"
             android:gravity="center" />
 
         <TextView
             android:text="已加载：0"
+            android:layout_weight="1"
             android:layout_marginLeft="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:id="@+id/loadedNumTv"
-            android:textSize="10sp"
+            android:textSize="8sp"
             android:gravity="center" />
     </LinearLayout>
     <com.cjj.MaterialRefreshLayout

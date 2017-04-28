@@ -38,11 +38,11 @@
     <string name="copyrights">CopyRights @Capton 437499914@qq.com</string>
     <string name="load_picture">https://raw.githubusercontent.com/Ccapton/LoadPicture/master/load.jpeg</string>
 
-    <string name="baidu_appid">9565744</string>
-    <string name="baidu_appkey">4if05c0mUOVXKBE2ix86qBfyNTdVBOyz</string>
-    <string name="ad_apikey">4if05c0mUOVXKBE2ix86qBfyNTdVBOyz</string>
-    <string name="fullscreen_ad_id">1vbsPotE2f5hRvKn0wIfs8qn</string>
-    <string name="native_ad_id">lM2GlpazKFOPii84cFjp211y</string>
-    <string name="banner_ad_id">ha6tpXuUHfujAiDtWDcmkkfG</string>
+    <string name="baidu_appid">9582807</string>
+    <string name="baidu_appkey">aEmmGjBGvaeSFVXMvwkkaaBCv8hdPYGn</string>
+    <string name="ad_apikey">aEmmGjBGvaeSFVXMvwkkaaBCv8hdPYGn</string>
+    <string name="fullscreen_ad_id">KIyZgxVpVF1uvDoq2e1Tp6RG</string>
+    <string name="native_ad_id">gFqAiXw6Rkta685XWzFW7rTr</string>
+    <string name="banner_ad_id">DkELugGX4FUcQEbFkXh3yCGj</string>
 
 </resources>

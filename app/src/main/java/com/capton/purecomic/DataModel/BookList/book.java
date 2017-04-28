@@ -3,6 +3,8 @@ package com.capton.purecomic.DataModel.BookList;
 
 //import com.baidu.appx.BDNativeAd;
 
+import com.baidu.appx.BDNativeAd;
+
 import java.io.Serializable;
 
 /**
@@ -21,15 +23,15 @@ public class book   implements Serializable {
     public static final int VIEWTYPE_AD=1;
     public int viewType=VIEWTYPE_NORMAL;
 
-  // private  BDNativeAd.AdInfo adInfo;
+   private  BDNativeAd.AdInfo adInfo;
 
- //   public BDNativeAd.AdInfo getAdInfo() {
- //       return adInfo;
- //   }
+    public BDNativeAd.AdInfo getAdInfo() {
+        return adInfo;
+    }
 
-  //  public void setAdInfo(BDNativeAd.AdInfo adInfo) {
-  //      this.adInfo = adInfo;
-  //  }
+    public void setAdInfo(BDNativeAd.AdInfo adInfo) {
+        this.adInfo = adInfo;
+    }
 
     public int getViewType() {
         return viewType;

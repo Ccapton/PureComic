@@ -67,7 +67,7 @@
                </LinearLayout>
                <TextView
                    android:id="@+id/descriptionTv"
-                   android:textSize="11sp"
+                   android:textSize="8sp"
                    android:gravity="center"
                    android:textColor="@color/colorPrimary"
                    android:layout_width="match_parent"

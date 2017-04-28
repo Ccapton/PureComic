@@ -10,15 +10,16 @@ import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.baidu.appx.BDSplashAd;
+
 //import com.baidu.appx.BDSplashAd;
 
 public class SplashActivity extends AppCompatActivity {
-  // public  BDSplashAd  ad=null;
+   public BDSplashAd ad=null;
     private String TAG="BDSplashAd";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
         //取消标题栏
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -36,18 +37,14 @@ public class SplashActivity extends AppCompatActivity {
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
                 //展示开屏广告
-             /*   if (ad.isLoaded()) {
+               if (ad.isLoaded()) {
                     ad.showAd();
-                }else {*/
-                    startActivity(new Intent(SplashActivity.this, MainActivity.class));
-                    finish();
-             //   }
+                }else {
+                   ad.loadAd();
+                }
             }
         });
-       /* if(ad==null) {
-        //    ad = new BDSplashAd(this, "rGygF66DB7WucxyWzdLxWGDybRP2wmjM", "GnyUDXqyGYDETbhHS2Qc7XBm");
            ad = new BDSplashAd(SplashActivity.this, getString(R.string.ad_apikey), getString(R.string.fullscreen_ad_id));
-
             ad.setAdListener(new BDSplashAd.SplashAdListener() {
                 @Override
                 public void onAdvertisementViewDidHide() {
@@ -61,12 +58,13 @@ public class SplashActivity extends AppCompatActivity {
                 @Override
                 public void onAdvertisementDataDidLoadSuccess() {
                     Log.i(TAG, "onAdvertisementDataDidLoadSuccess: ");
-                    animator.start();
                 }
 
                 @Override
                 public void onAdvertisementDataDidLoadFailure() {
                     Log.i(TAG, "onAdvertisementDataDidLoadFailure: ");
+                    ad.destroy();
+                    ad = null;
                     startActivity(new Intent(SplashActivity.this, MainActivity.class));
                     finish();
                 }
@@ -84,20 +82,12 @@ public class SplashActivity extends AppCompatActivity {
                 @Override
                 public void onAdvertisementViewWillStartNewIntent() {
                     Log.i(TAG, "onAdvertisementViewWillStartNewIntent: ");
+                    ad.destroy();
+                    ad = null;
                     startActivity(new Intent(SplashActivity.this, MainActivity.class));
                     finish();
                 }
             });
-            //如果本地无广告可用，需要下载广告，待下次启动使用
-             if (!ad.isLoaded()) {
-                ad.loadAd();
-             }
-         //展示开屏广告
-        if (ad.isLoaded()) {
-            ad.showAd();
-        }
-
-        }*/
         animator.start();
     }
 
