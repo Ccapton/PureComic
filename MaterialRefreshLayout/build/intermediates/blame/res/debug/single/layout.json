@@ -12,12 +12,12 @@
         "source": "/Users/capton/GitHub/PureComic/MaterialRefreshLayout/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "/Users/capton/AndroidStudioProjects/PureComic/MaterialRefreshLayout/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
-        "source": "/Users/capton/AndroidStudioProjects/PureComic/MaterialRefreshLayout/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_toolbar.xml"
-    },
-    {
         "merged": "/Users/capton/AndroidStudioProjects/PureComic/MaterialRefreshLayout/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
         "source": "/Users/capton/AndroidStudioProjects/PureComic/MaterialRefreshLayout/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "/Users/capton/AndroidStudioProjects/PureComic/MaterialRefreshLayout/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
+        "source": "/Users/capton/AndroidStudioProjects/PureComic/MaterialRefreshLayout/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_toolbar.xml"
     },
     {
         "merged": "/Users/capton/AndroidStudioProjects/PureComic/MaterialRefreshLayout/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",

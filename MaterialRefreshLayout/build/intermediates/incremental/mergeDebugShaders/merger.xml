@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/capton/GitHub/PureComic/MaterialRefreshLayout/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/capton/GitHub/PureComic/MaterialRefreshLayout/src/debug/shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/capton/AndroidStudioProjects/PureComic/MaterialRefreshLayout/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/capton/AndroidStudioProjects/PureComic/MaterialRefreshLayout/src/debug/shaders"/></dataSet></merger>

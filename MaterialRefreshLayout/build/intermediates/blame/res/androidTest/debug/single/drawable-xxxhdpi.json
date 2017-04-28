@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/capton/AndroidStudioProjects/PureComic/MaterialRefreshLayout/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi/abc_scrubber_control_to_pressed_mtrl_005.png",
-        "source": "/Users/capton/AndroidStudioProjects/PureComic/MaterialRefreshLayout/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_scrubber_control_to_pressed_mtrl_005.png"
-    },
-    {
         "merged": "/Users/capton/AndroidStudioProjects/PureComic/MaterialRefreshLayout/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi/abc_ic_ab_back_mtrl_am_alpha.png",
         "source": "/Users/capton/AndroidStudioProjects/PureComic/MaterialRefreshLayout/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_ic_ab_back_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/capton/AndroidStudioProjects/PureComic/MaterialRefreshLayout/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi/abc_scrubber_control_to_pressed_mtrl_005.png",
+        "source": "/Users/capton/AndroidStudioProjects/PureComic/MaterialRefreshLayout/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
         "merged": "/Users/capton/GitHub/PureComic/MaterialRefreshLayout/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi/abc_ic_clear_mtrl_alpha.png",
