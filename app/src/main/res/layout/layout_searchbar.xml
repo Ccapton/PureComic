@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:clickable="true"
+    android:background="@color/colorPrimary"
+    android:gravity="center_vertical">
+
+    <Button
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:id="@+id/closeSearchbarBtn"
+        android:background="@mipmap/back_arrow"
+        android:layout_marginLeft="10dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:inputType="textPersonName"
+        android:imeOptions="actionSearch"
+        android:ems="10"
+        android:id="@+id/searchEt"
+        android:layout_weight="1"
+        android:background="@drawable/shape_search_edittext"
+        android:paddingLeft="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="30dp"
+        android:hint="关键词搜索"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/searchBtn"
+        android:background="@mipmap/search"
+        android:layout_marginRight="10dp"
+        android:layout_width="18dp"
+        android:layout_height="18dp" />
+
+</LinearLayout>

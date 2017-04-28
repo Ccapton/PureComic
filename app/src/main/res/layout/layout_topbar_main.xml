@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xmln="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:id="@+id/topbar"
+    android:layout_height="44dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:id="@+id/userLayout"
+        android:layout_width="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="20dp">
+            <TextView
+                android:layout_marginBottom="3dp"
+                android:background="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="3dp" />
+            <TextView
+                android:layout_marginBottom="3dp"
+                android:background="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="3dp" />
+            <TextView
+                android:layout_marginBottom="3dp"
+                android:background="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="3dp" />
+        </LinearLayout>
+        <com.capton.purecomic.CustomView.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:border_width="1dp"
+            app:border_color="@android:color/white"
+            android:id="@+id/userIv"
+            android:src="@mipmap/image_default"
+            android:layout_gravity="center"
+            android:layout_width="36dp"
+            android:layout_height="36dp" />
+        <TextView
+            android:text="未登录"
+            android:id="@+id/nickName"
+            android:paddingLeft="10dp"
+            android:textColor="@android:color/white"
+            android:gravity="center_vertical|left"
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_margin="2dp"
+        android:id="@+id/adLayout" />
+
+    <Button
+
+        android:layout_marginLeft="10dp"
+        android:id="@+id/openSearchbarBtn"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="center"
+        android:background="@mipmap/search"
+        android:layout_width="18dp"
+        android:layout_height="18dp" />
+</LinearLayout>

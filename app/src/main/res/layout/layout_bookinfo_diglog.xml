@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="160dp"
+            android:layout_height="200dp">
+            <com.github.ybq.android.spinkit.SpinKitView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:SpinKit_Color="@color/colorPrimary"
+                app:SpinKit_Style="ThreeBounce"
+                android:id="@+id/spin_kit"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/bookIv"
+                android:layout_width="160dp"
+                android:layout_height="200dp" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginRight="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+             >
+            <TextView
+                android:text="《月光》"
+                android:layout_margin="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/name" />
+            <TextView
+                android:layout_margin="4dp"
+                android:text="类型：少年漫画"
+                android:textSize="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/type" />
+            <TextView
+                android:layout_margin="4dp"
+                android:text="区域：日本漫画"
+                android:textSize="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/area" />
+            <TextView
+                android:layout_margin="4dp"
+                android:text="我是晴明怎么了漫画 ，身为安倍晴明神社神官的儿子是小优一生的耻辱！什么安倍晴明嘛，明明"
+                android:textSize="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/des" />
+            <TextView
+                android:layout_margin="4dp"
+                android:text="连载状态：正在连载"
+                android:textSize="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/finish" />
+            <TextView
+                android:layout_margin="4dp"
+                android:text="上次更新：2014/11/15"
+                android:textSize="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lastUpdate" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@android:color/white"
+                android:text="章节详情"
+                android:id="@+id/readBtn"
+                android:background="@drawable/rect_circle_btn" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:id="@+id/chapterListView"
+        android:layout_height="wrap_content" />
+</LinearLayout>

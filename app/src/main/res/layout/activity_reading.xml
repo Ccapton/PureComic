@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_reading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.capton.purecomic.ReadingActivity">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/bookVp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true">
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="right"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/actionBar">
+        <include
+            android:id="@+id/tag"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            layout="@layout/tag"/>
+        <LinearLayout
+
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <LinearLayout
+                android:layout_marginRight="5dp"
+                android:id="@+id/collect"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:padding="4dp"
+                android:gravity="center"
+                android:background="@drawable/rect_circle_btn2"
+                android:layout_width="60dp"
+                android:layout_height="20dp">
+                <ImageView
+                    android:src="@mipmap/like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="收藏"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:padding="4dp"
+                android:gravity="center"
+                android:background="@drawable/rect_circle_btn2"
+                android:layout_width="60dp"
+                android:id="@+id/lastChapter"
+                android:layout_height="20dp" >
+                <ImageView
+                    android:src="@mipmap/last"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="10sp"
+                    android:text="上一卷"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                </LinearLayout>
+            <LinearLayout
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:padding="4dp"
+                android:gravity="center"
+                android:background="@drawable/rect_circle_btn2"
+                android:layout_width="60dp"
+                android:id="@+id/chapterList"
+                android:layout_height="20dp" >
+                <ImageView
+                    android:src="@mipmap/menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="10sp"
+                    android:text="目录"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+             </LinearLayout>
+            <LinearLayout
+                android:layout_marginRight="5dp"
+                android:id="@+id/nextChapter"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:padding="4dp"
+                android:gravity="center"
+                android:background="@drawable/rect_circle_btn2"
+                android:layout_width="60dp"
+                android:layout_height="20dp">
+                <TextView
+                    android:text="下一卷"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:src="@mipmap/next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginRight="5dp"
+                android:id="@+id/hideLayout"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:padding="4dp"
+                android:gravity="center"
+                android:background="@drawable/rect_circle_btn2"
+                android:layout_width="60dp"
+                android:layout_height="20dp">
+                <TextView
+                    android:text="隐藏菜单"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:src="@mipmap/hide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/comicInfo"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/chapter"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="10sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp" />
+     <TextView
+         android:id="@+id/comic"
+         android:textColor="@android:color/white"
+         android:textSize="10sp"
+         android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true"
+         android:layout_width="wrap_content"
+         android:layout_height="16dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

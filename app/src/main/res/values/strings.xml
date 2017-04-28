@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">纯粹漫画</string>
+    <!--漫画分类-->
+    <string name="api_category">http://japi.juhe.cn/comic/category?key=23ba30a8b724a1354c4e54402e5d2069</string>
+
+    <!--接口key-->
+    <string name="api_key">23ba30a8b724a1354c4e54402e5d2069</string>
+
+    <!--漫画书列表
+    参数：
+    name 漫画名 String
+    type 漫画类别 String
+    skip 跳过的数量 int
+    finish 是否完结 int 0未完结 1完结 不设置默认所有
+    key  api_key
+    -->
+    <string name="api_book">http://japi.juhe.cn/comic/book?</string>
+
+    <!--漫画章节列表
+    参数:
+    comicName，漫画名 String
+    skip，跳过的章节数 int
+    key  api_key
+    -->
+    <string name="api_chapter">http://japi.juhe.cn/comic/chapter?</string>
+
+    <!--漫画章节详细内容
+    参数:
+    comicName，漫画名 String
+    id 章节id int
+    key  api_key
+    -->
+    <string name="api_chapterContent">http://japi.juhe.cn/comic/chapterContent?</string>
+
+    <string name="bmob_appid">2ba34ff35f00a43bad8cf9be76723344</string>
+    <string name="bmob_sms_pattern">纯粹漫画验证码</string>
+    <!--<string name="jpush_appid">bbd6d766cd48035a26c1a4dd</string> -->
+    <string name="copyrights">CopyRights @Capton 437499914@qq.com</string>
+    <string name="load_picture">https://raw.githubusercontent.com/Ccapton/LoadPicture/master/load.jpeg</string>
+
+    <string name="baidu_appid">9565744</string>
+    <string name="baidu_appkey">4if05c0mUOVXKBE2ix86qBfyNTdVBOyz</string>
+    <string name="ad_apikey">4if05c0mUOVXKBE2ix86qBfyNTdVBOyz</string>
+    <string name="fullscreen_ad_id">1vbsPotE2f5hRvKn0wIfs8qn</string>
+    <string name="native_ad_id">lM2GlpazKFOPii84cFjp211y</string>
+    <string name="banner_ad_id">ha6tpXuUHfujAiDtWDcmkkfG</string>
+
+</resources>

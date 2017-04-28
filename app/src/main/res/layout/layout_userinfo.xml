@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/back_arrow"
+            android:id="@+id/closeShowBtn" />
+
+        <com.capton.purecomic.CustomView.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:border_color="@android:color/white"
+            app:border_width="1dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/image_default"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/userIv3" />
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+
+            <TextView
+                android:gravity="center"
+                android:text="未登录"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/usernameTv3"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="20dp"
+                android:src="@mipmap/male"
+                android:id="@+id/sexIv"
+                android:layout_height="20dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:text="编辑资料"
+        android:layout_width="match_parent"
+        android:id="@+id/editUserinfoTv"
+        android:gravity="center"
+        android:layout_height="50dp"
+        android:background="@drawable/user_item" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorGrey" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"  />
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:text="注销账号"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rect_circle_btn_normal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+</LinearLayout>

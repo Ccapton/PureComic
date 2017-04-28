@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MaterialRefreshLayout/MaterialRefreshLayout.iml" filepath="$PROJECT_DIR$/MaterialRefreshLayout/MaterialRefreshLayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PagerIndicator/PagerIndicator.iml" filepath="$PROJECT_DIR$/PagerIndicator/PagerIndicator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PureComic.iml" filepath="$PROJECT_DIR$/PureComic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/optionlayout/optionlayout.iml" filepath="$PROJECT_DIR$/optionlayout/optionlayout.iml" />
+    </modules>
+  </component>
+</project>

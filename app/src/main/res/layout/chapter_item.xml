@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+     <TextView
+         android:id="@+id/chapterTv"
+         android:layout_marginLeft="20dp"
+         android:gravity="center_vertical|start"
+         android:layout_weight="1"
+         android:layout_width="0dp"
+         android:layout_height="50dp"
+         android:text="第一卷" />
+
+    <TextView
+        android:layout_height="10dp"
+        android:id="@+id/ball"
+        android:background="@drawable/ball"
+        android:layout_marginRight="20dp"
+        android:layout_width="10dp" />
+</LinearLayout>

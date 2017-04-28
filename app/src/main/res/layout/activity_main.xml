@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawerlayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.capton.purecomic.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/layout_topbar_main"></include>
+            <chen.capton.indicator.PagerIndicator
+                xmlns:indicator="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/indicator"
+                android:background="@color/colorPrimary"
+                indicator:textCheckedColor="@android:color/white"
+                indicator:textSize="12sp"
+                indicator:textColor="@color/colorGrey"
+                indicator:lineColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+            </chen.capton.indicator.PagerIndicator>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v4.view.ViewPager>
+
+        </LinearLayout>
+        <include
+            android:clickable="true"
+            android:id="@+id/loginLayout"
+            layout="@layout/layout_login"  />
+
+        <include
+            android:clickable="true"
+            android:id="@+id/signinLayout"
+            layout="@layout/layout_signin"/>
+
+        <include
+            android:id="@+id/searchbarLayout"
+            layout="@layout/layout_searchbar"
+            android:layout_height="50dp"
+            android:layout_width="match_parent" />
+        <include
+            android:id="@+id/searchContentLayout"
+            android:layout_below="@+id/searchbarLayout"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            layout="@layout/layout_search_content"/>
+    </RelativeLayout>
+
+
+    <include
+        android:id="@+id/menuLayout"
+        android:layout_gravity="start"
+        android:clickable="true"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        layout="@layout/layout_user" />
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearyout1"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <com.capton.purecomic.CustomView.CircleImageView
+            app:border_color="@android:color/white"
+            app:border_width="1dp"
+            android:layout_marginLeft="12dp"
+            android:src="@mipmap/image_default"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/userIv2" />
+
+        <TextView
+            android:gravity="center"
+            android:text="点击登录"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/usernameTv"
+            android:background="@drawable/touming_btn" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/optionLayout"
+        android:background="@color/option_bg"
+        android:layout_below="@+id/linearyout1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|left"
+            android:id="@+id/lastReadLayout"
+            android:background="@drawable/user_item"
+            android:layout_marginTop="10dp"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/history"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:layout_marginLeft="13dp"
+                android:gravity="center_vertical|start"
+                android:layout_height="50dp"
+                android:text="最近浏览"
+                android:layout_width="wrap_content" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:id="@+id/lastReadTv"
+                android:textSize="8sp"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                android:layout_marginRight="5dp"
+                android:layout_width="150dp" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/collectionLayout"
+            android:background="@drawable/user_item"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/collection"
+                android:layout_height="23dp"
+                android:layout_width="23dp" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical|start"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:text="我的收藏" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/textView5"
+            android:clickable="true" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:id="@+id/exit"
+                android:background="@drawable/user_item">
+
+                <ImageView
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="24dp"  />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical|start"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:text="退出" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:id="@+id/textView3"
+                android:background="@color/colorGrey" />
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/setting"
+                android:background="@drawable/user_item">
+
+                <ImageView
+                    android:layout_marginLeft="26dp"
+                    android:src="@mipmap/setting"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical|start"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:text="设置" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/optionLayout"
+        android:id="@+id/settingLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/option_bg">
+        <LinearLayout
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:background="@android:color/white"
+            android:layout_height="50dp">
+            <Button
+                android:id="@+id/closeSettingBtn"
+                android:layout_marginLeft="10dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+
+            <TextView
+                android:text="设置"
+                android:gravity="center"
+                android:layout_marginLeft="-40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:layout_weight="1"
+                android:textColor="@color/loginTextTitle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/screenOriLayout"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:clickable="true">
+
+                <TextView
+                    android:text="横屏阅读"
+                    android:layout_width="150dp"
+                    android:id="@+id/landscapeTv"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30dp"
+                    android:layout_height="50dp"
+                    android:background="@android:color/white"
+                    android:clickable="true"  />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:id="@+id/landscapeSwitchBtn"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGrey" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true" />
+            <TextView
+                android:text="版本升级"
+                android:layout_width="match_parent"
+                android:id="@+id/upgrade"
+                android:gravity="center_vertical"
+                android:paddingLeft="30dp"
+                android:layout_height="50dp"
+                android:background="@drawable/user_item"
+                android:clickable="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGrey" />
+            <TextView
+                android:text="反馈信息"
+                android:layout_width="match_parent"
+                android:id="@+id/suggest"
+                android:gravity="center_vertical"
+                android:paddingLeft="30dp"
+                android:layout_height="50dp"
+                android:background="@drawable/user_item"
+                android:clickable="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGrey" />
+            <TextView
+                android:text="关于"
+                android:layout_width="match_parent"
+                android:id="@+id/about"
+                android:gravity="center_vertical"
+                android:paddingLeft="30dp"
+                android:layout_height="50dp"
+                android:background="@drawable/user_item"
+                android:clickable="true" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/userinfoShowLayout"
+        layout="@layout/layout_userinfo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

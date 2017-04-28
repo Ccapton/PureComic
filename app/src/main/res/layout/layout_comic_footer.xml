@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+
+        android:id="@+id/adlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:SpinKit_Color="@color/colorPrimary"
+            app:SpinKit_Style="ThreeBounce"
+            android:id="@+id/spin_kit"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+           <LinearLayout
+               android:orientation="vertical"
+               android:id="@+id/ad1"
+               android:gravity="center"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <LinearLayout
+                   android:orientation="vertical"
+                   android:gravity="center"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   <RelativeLayout
+                       android:layout_marginRight="5dp"
+                       android:layout_marginLeft="5dp"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+                   <ImageView
+                       android:layout_centerInParent="true"
+                       android:id="@+id/iconIv"
+                       android:layout_width="100dp"
+                       android:layout_height="100dp" />
+                       <TextView
+                           android:text="推广"
+                           android:layout_marginRight="5dp"
+                           android:textSize="10sp"
+                           android:textColor="@android:color/white"
+                           android:layout_alignParentRight="true"
+                           android:layout_alignParentTop="true"
+                           android:gravity="center"
+                           android:background="@drawable/shape_ad_tips"
+                           android:layout_width="40dp"
+                           android:layout_height="20dp" />
+                   </RelativeLayout>
+                   <LinearLayout
+                       android:orientation="horizontal"
+                       android:gravity="center_horizontal"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent">
+                       <TextView
+                           android:id="@+id/titleTv"
+                           android:gravity="center"
+                           android:textColor="@android:color/black"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content" />
+
+                   </LinearLayout>
+               </LinearLayout>
+               <TextView
+                   android:id="@+id/descriptionTv"
+                   android:textSize="11sp"
+                   android:gravity="center"
+                   android:textColor="@color/colorPrimary"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+           </LinearLayout>
+
+    </RelativeLayout>
+    </RelativeLayout>
+
+
+<!-- String description=adArray.get(0).getDescription();
+            String fileSize=adArray.get(0).getFileSize();
+            String iconUrl=adArray.get(0).getIconUrl();
+            String imageUrl=adArray.get(0).getImageUrl();-->

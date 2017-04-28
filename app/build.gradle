@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.capton.purecomic"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //自己做的viewpager指示器
+    // compile 'com.github.Ccapton:PagerIndicator:1.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.quinny898.library.persistentsearch:library:1.1.0-SNAPSHOT'
+    //自己做的右滑拉出选项的自定义view
+    // compile 'com.github.Ccapton:OptionLayout:1.0'
+    compile 'cn.bmob.android:bmob-sdk:3.5.0'
+    //如果你想应用能够兼容Android6.0，请添加此依赖(org.apache.http.legacy.jar)
+    compile 'cn.bmob.android:http-legacy:1.0'
+    testCompile 'junit:junit:4.12'
+    compile 'com.alibaba:fastjson:1.2.31'
+    //自定义开关
+    compile 'com.kyleduo.switchbutton:library:1.4.5'
+    //加载动画
+    compile 'com.github.ybq:Android-SpinKit:1.1.0'
+    //图片选择器
+    compile 'com.yuyh.imgsel:library:1.2.0'
+    //极光推送
+    //compile 'cn.jiguang.sdk:jpush:3.0.5'
+    // 此处以JPush 3.0.5 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.1.2'
+    // 此处以JCore 1.1.2 版本为例。
+     compile project(':MaterialRefreshLayout')
+    //badgeView
+    compile 'q.rorbin:badgeview:1.1.0'
+    //bannerView
+    compile 'com.github.Ccapton:BannerView:1.0'
+     compile project(':optionlayout')
+    compile project(':PagerIndicator')
+    testCompile 'junit:junit:4.12'
+}
