@@ -13,7 +13,7 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -44,16 +44,13 @@ dependencies {
     compile 'com.github.ybq:Android-SpinKit:1.1.0'
     //图片选择器
     compile 'com.yuyh.imgsel:library:1.2.0'
-    //极光推送
-    //compile 'cn.jiguang.sdk:jpush:3.0.5'
-    // 此处以JPush 3.0.5 版本为例。
-    //compile 'cn.jiguang.sdk:jcore:1.1.2'
+
     // 此处以JCore 1.1.2 版本为例。
      compile project(':MaterialRefreshLayout')
     //badgeView
     compile 'q.rorbin:badgeview:1.1.0'
     //bannerView
-    compile 'com.github.Ccapton:BannerView:1.0'
+   // compile 'com.github.Ccapton:BannerView:1.0'
      compile project(':optionlayout')
     compile project(':PagerIndicator')
     testCompile 'junit:junit:4.12'

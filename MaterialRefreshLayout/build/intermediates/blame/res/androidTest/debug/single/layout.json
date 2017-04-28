@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/capton/GitHub/PureComic/MaterialRefreshLayout/build/intermediates/res/merged/androidTest/debug/layout/abc_select_dialog_material.xml",
-        "source": "/Users/capton/GitHub/PureComic/MaterialRefreshLayout/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_select_dialog_material.xml"
-    },
-    {
         "merged": "/Users/capton/GitHub/PureComic/MaterialRefreshLayout/build/intermediates/res/merged/androidTest/debug/layout/abc_dialog_title_material.xml",
         "source": "/Users/capton/GitHub/PureComic/MaterialRefreshLayout/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "/Users/capton/GitHub/PureComic/MaterialRefreshLayout/build/intermediates/res/merged/androidTest/debug/layout/abc_select_dialog_material.xml",
+        "source": "/Users/capton/GitHub/PureComic/MaterialRefreshLayout/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_select_dialog_material.xml"
     },
     {
         "merged": "/Users/capton/GitHub/PureComic/MaterialRefreshLayout/build/intermediates/res/merged/androidTest/debug/layout/abc_alert_dialog_material.xml",
